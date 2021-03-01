@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>This is Heading -1</h1>
+            <p>lorem8</p>
+        </div>
+        <div class="container">
+            <h1>This is Heading -2</h1>
+            <p>lorem8</p>
+        </div>
+        <div class="container">
+            <h1>This is Heading -3</h1>
+            <p>lorem8</p>
+        </div>
+        <div class="">
+            <h1>This is Heading -4</h1>
+            <p>lorem8</p>
+        </div>
+        <h1 class="special">Hover me</h1>
+    </section>
+
+    <script>
+        var container = document.querySelectorAll(".container h1");
+        for (let i = 0; i < container.length; i++) {
+            const element = container[i];
+            element.style.backgroundColor = "tomato";
+        }
+        var singleElement = document.querySelector(".container")
+        singleElement.style.color = "red";
+
+        var setA = document.querySelector(".special");
+        setA.setAttribute("title", "This is special")
+        
+    </script>
+</body>
+</html>

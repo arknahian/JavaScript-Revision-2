@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Child</title>
+</head>
+<body>
+    <h1>This is a thing</h1>
+    <ul id="list">
+        <li>this</li>
+        <li>is</li>
+        <li>a</li>
+        <li>thing</li>
+    </ul>
+    <div id="container">
+        <h1>this a example</h1>
+        <p>lorem4</p>
+    </div>
+
+    <section id="sec">
+        <h1>This is a heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi assumenda nemo excepturi? Magni voluptas laboriosam ducimus? Eius consectetur consequuntur quam?</p>
+
+    </section>
+    <script>
+        var makeChild = document.getElementById("list");
+        const list = document.createElement("li");
+        list.innerHTML = "This is another ";
+        makeChild.appendChild(list);
+
+        var makeBtn = document.getElementById("container");
+        const btn = document.createElement("button");
+            btn.innerHTML = "Click Me";
+            makeBtn.appendChild(btn);
+
+
+        var anotherBtn = document.getElementById("sec");
+        var btnAttribute = document.createElement("button");
+        btnAttribute.innerHTML = "Click Here";
+        anotherBtn.appendChild(btnAttribute);
+
+
+    </script>
+</body>
+</html>

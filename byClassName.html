@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Class Name Set Attribute</title>
+    <style>
+     .container {
+         border: 1px solid red;
+         margin: 4px;
+     }
+    </style>
+</head>
+<body>
+    <div id="section">
+        <div class="container" id="first">
+            <article>
+                <h1>This is article - 1</h1>
+                <p>author -1</p>
+                <p class="author">author</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi soluta fuga distinctio? Ratione fuga et harum sunt repellat esse?</p>
+            </article>
+        </div>
+        <div class="container">
+            <article>
+                <h1>This is article - 2</h1>
+                <p>author -2</p>
+                <p class="author">author</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi soluta fuga distinctio? Ratione fuga et harum sunt repellat esse?</p>
+            </article>
+        </div>
+        <div class="container">
+            <article>
+                <h1>This is article - 3</h1>
+                <p>author -3</p>
+                <p class="author">author</p>
+                <p id="bgP-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi soluta fuga distinctio? Ratione fuga et harum sunt repellat esse?</p>
+            </article>
+        </div>
+        <div class="container">
+            <article>
+                <h1 id="bg-example">This is article - 4</h1>
+                <p>author -4</p>
+                <p class="author">author</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi soluta fuga distinctio? Ratione fuga et harum sunt repellat esse?</p>
+            </article>
+        </div>
+    </div>
+    <script>
+        var exampleBg = document.getElementById("bg-example")
+        exampleBg.style.color = "red";
+        
+        var authorBg = document.getElementsByClassName("author");
+        for (let i = 0; i < authorBg.length; i++) {
+            const element = authorBg[i];
+            element.style.backgroundColor = "red";
+        }
+        var articleBg = document.getElementsByTagName("article");
+
+        for (let i = 0; i < articleBg.length; i++) {
+            const element = articleBg[i];
+            element.style.backgroundColor = "tomato";
+        }
+        
+        var bgBlack = document.getElementById("bgP-black");
+        bgBlack.style.backgroundColor = "black";
+        bgBlack.style.color = "white";
+
+        var author = document.getElementsByClassName("author");
+        for (let i = 0; i < author.length; i++) {
+            const element = author[i];
+            element.innerHTML = "Lekhok" + (i + 1);
+        }
+    </script>
+</body>
+</html>
