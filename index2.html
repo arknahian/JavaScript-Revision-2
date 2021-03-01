@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <div>
+  <h1>My List</h1>
+  <ul id="my-list">
+      <li>My list -1</li>
+      <li>My list -2</li>
+      <li>My list -3</li>
+      <li>My list -4</li>
+      <li>My list -5</li>
+  </ul>
+</div>
+
+    <div id="container">
+        <article>
+            <h1>this is heading -1</h1>
+            <p class="author">author-1</p>
+            <p>lorem20</p>
+        </article>
+        <article>
+            <h1>this is heading -2</h1>
+            <p class="author">author-2</p>
+            <p>lorem20</p>
+        </article>
+        <article>
+            <h1>this is heading -3</h1>
+            <p class="author">author-3</p>
+            <p>lorem20</p>
+        </article>
+        <article>
+            <h1>this is heading -4</h1>
+            <p class="author">author-4</p>
+            <p>lorem20</p>
+        </article>
+    </div>
+  <script>
+      var myList = document.getElementById("my-list");
+      var newList = document.createElement("li");
+      newList.innerHTML = "This is new one what was created by javascript";
+      myList.appendChild(newList);
+
+      var articleBtn = document.querySelectorAll("article");
+      for (let i = 0; i < articleBtn.length; i++) {
+          const element = articleBtn[i];
+          var newBtn = document.createElement("button");
+          newBtn.innerHTML = "Click me";
+          element.appendChild(newBtn);
+      }
+  </script>
+   
+</body>
+</html>

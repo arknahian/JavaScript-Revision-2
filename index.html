@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <div>
+        <h1>This is heading -1</h1>
+        <h1>This is heading -2</h1>
+        <h1>This is heading -3</h1>
+        <h1 class="myClass">This is new</h1>
+        <h2 class="myClass">This is h2</h2>
+        <h2 class="myClass">This is h2</h2>
+        <h2 class="myClass">This is h2</h2>
+        <h2 class="myClass">This is h2</h2>
+
+        <h4 id="myId">This is h4</h4>
+    </div>
+    <script>
+      var qExample = document.querySelector("h1");
+      qExample.style.backgroundColor = "tomato";
+
+      var qAllExample = document.querySelectorAll("h1");
+      for (let i = 0; i < qAllExample.length; i++) {
+          const element = qAllExample[i];
+          element.style.color = "red";
+      }
+      console.log(qAllExample);
+
+      var myH2 = document.querySelectorAll(".myClass");
+      console.log(myH2);
+
+      var newID = document.querySelectorAll("#myId");
+      console.log(newID);
+    </script>
+</body>
+</html>
